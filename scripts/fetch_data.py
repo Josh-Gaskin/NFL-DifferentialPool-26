@@ -5,7 +5,9 @@ them to /data as static files that the site reads at runtime:
 
   data/teams.json    - the 32 NFL teams (id, abbreviation, name, logo)
   data/fpi.json       - current season FPI rating per team
-  data/schedule.json  - full regular-season schedule (weeks 1-18), home/away
+  data/schedule.json  - full regular-season schedule (weeks 1-18), home/away,
+                         plus completion status and final score once a game
+                         is over
 
 These endpoints are not officially documented or supported by ESPN, have no
 auth, and can change shape without notice. This script is defensive: if a
@@ -146,6 +148,26 @@ def fetch_fpi(team_id_by_abbr):
     return results
 
 
+def _score_value(score_field):
+    """Competitor 'score' in the core API is sometimes an embedded number and
+    sometimes a {"$ref": ...} that needs one more fetch. Handle both."""
+    if score_field is None:
+        return None
+    if isinstance(score_field, (int, float)):
+        return float(score_field)
+    if isinstance(score_field, dict):
+        if "value" in score_field:
+            return float(score_field["value"])
+        if "$ref" in score_field:
+            try:
+                data = get_json(score_field["$ref"])
+                if "value" in data:
+                    return float(data["value"])
+            except Exception:
+                return None
+    return None
+
+
 def fetch_schedule(id_to_abbr):
     """
     Same 403-from-Actions issue as fetch_teams applies to the scoreboard
@@ -154,6 +176,11 @@ def fetch_schedule(id_to_abbr):
     get its competitors. Team identity is resolved from the ref URL's id
     against the id_to_abbr map already built in fetch_teams, so we don't
     need a further dereference per competitor.
+
+    Each event also carries completion status and, once a game is final,
+    the score (which may itself need one more dereference) - this is what
+    lets the site auto-fill actual point differentials instead of the
+    picks having to be entered by hand.
     """
     weeks = {}
     for wk in WEEKS:
@@ -171,7 +198,12 @@ def fetch_schedule(id_to_abbr):
             comps = event.get("competitions", [])
             if not comps:
                 continue
-            competitors = comps[0].get("competitors", [])
+            competition = comps[0]
+            competitors = competition.get("competitors", [])
+
+            status = competition.get("status", {}) or {}
+            status_type = status.get("type", {}) or {}
+            completed = bool(status_type.get("completed", False))
 
             home = away = None
             for c in competitors:
@@ -180,6 +212,8 @@ def fetch_schedule(id_to_abbr):
                 if not abbr:
                     continue
                 entry = {"id": str(tid), "abbr": abbr}
+                if completed:
+                    entry["score"] = _score_value(c.get("score"))
                 if c.get("homeAway") == "home":
                     home = entry
                 else:
@@ -195,6 +229,9 @@ def fetch_schedule(id_to_abbr):
                     "away": away["abbr"],
                     "homeId": home["id"],
                     "awayId": away["id"],
+                    "completed": completed,
+                    "homeScore": home.get("score") if completed else None,
+                    "awayScore": away.get("score") if completed else None,
                 }
             )
             time.sleep(0.1)
