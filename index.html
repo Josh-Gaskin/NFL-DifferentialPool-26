@@ -11,6 +11,73 @@
     <h1>NFL Point Differential Pool</h1>
   </header>
 
+  <nav class="tabs">
+    <button data-tab="picks" class="active">Picks & Strategy</button>
+    <button data-tab="matrix">Full Schedule</button>
+  </nav>
+
+  <main id="app-view">
+    <section id="picks-view">
+      <p class="explainer">
+        Diff = your picked team's score minus their opponent's. A <strong>negative</strong> number
+        means your team lost by that much (good — it lowers your total). A positive number means
+        they won (bad). Goal: lowest season total. Each team can be used once. Weeks 1, 9, 12 and 18
+        need two picks. Results are pulled automatically after each game; use "edit" only if you need
+        to correct one.
+      </p>
+
+      <section id="summary" class="summary-grid"></section>
+
+      <table id="picks-table">
+        <thead>
+          <tr>
+            <th>Week</th>
+            <th>Team</th>
+            <th>Opponent</th>
+            <th>Predicted Diff</th>
+            <th>Actual Result</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section id="matrix-view" class="hidden">
+      <p class="explainer">
+        Every team's full schedule at a glance. <span class="legend-swatch picked"></span> = your locked pick,
+        <span class="legend-swatch recommended"></span> = the optimizer's current recommendation for that slot.
+        Switch views to see either the matchup or the predicted point differential for every team, every week.
+      </p>
+      <div class="matrix-controls">
+        <button data-matrix-mode="matchup" class="active">Matchups</button>
+        <button data-matrix-mode="diff">Predicted Diff (heatmap)</button>
+      </div>
+      <div class="matrix-scroll">
+        <table id="matrix-table">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NFL Point Differential Pool</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>NFL Point Differential Pool</h1>
+  </header>
+
   <main id="app-view">
     <p class="explainer">
       Diff = your picked team's score minus their opponent's. A <strong>negative</strong> number
