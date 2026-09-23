@@ -96,3 +96,94 @@ tr.locked { background: #fbfefc; }
 select { padding: 0.35rem; min-width: 220px; }
 
 #auth-box { display: flex; align-items: center; gap: 0.75rem; font-size: 0.85rem; }
+
+/* ---------- Tabs ---------- */
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.tabs button {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  padding: 0.5rem 0.25rem;
+  font-size: 0.95rem;
+  color: #57606a;
+}
+.tabs button.active {
+  color: #1f2328;
+  border-bottom-color: #0969da;
+  font-weight: 600;
+}
+
+.source-tag {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  color: #57606a;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0 4px;
+  margin: 0 4px;
+}
+.pending { color: #57606a; font-style: italic; }
+
+.legend-swatch {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  margin: 0 3px -1px 6px;
+  border: 1px solid var(--border);
+}
+.legend-swatch.picked { background: #fff3c4; border-color: #d4a72c; }
+.legend-swatch.recommended { background: #ddf4ff; border-color: #54aeff; }
+
+/* ---------- Matrix ---------- */
+.matrix-controls { display: flex; gap: 0.5rem; margin: 0.75rem 0; }
+.matrix-controls button.active { background: #0969da; color: #fff; border-color: #0969da; }
+
+.matrix-scroll {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+#matrix-table {
+  border-collapse: collapse;
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+#matrix-table th, #matrix-table td {
+  border: 1px solid var(--border);
+  padding: 0.3rem 0.4rem;
+  text-align: center;
+}
+#matrix-table th { background: var(--bg-alt); font-size: 0.7rem; }
+.two-pick { display: block; font-size: 0.6rem; color: #57606a; font-weight: normal; }
+
+.sticky-col {
+  position: sticky;
+  left: 0;
+  background: #fff;
+  z-index: 1;
+  text-align: left !important;
+  font-weight: 600;
+}
+thead .sticky-col { background: var(--bg-alt); z-index: 2; }
+
+#matrix-table .bye { color: #b1b8c0; font-style: italic; }
+#matrix-table .ha { color: #8c959f; margin-right: 2px; font-weight: normal; }
+
+#matrix-table td.picked { outline: 2px solid #d4a72c; outline-offset: -2px; background: #fff8e1; }
+#matrix-table td.recommended { outline: 2px dashed #54aeff; outline-offset: -2px; }
+
+/* Predicted-diff heatmap: negative (your team predicted to lose) = good = green */
+.diff-vgood   { background: #1a7f37; color: #fff; }
+.diff-good    { background: #57ab5a; color: #fff; }
+.diff-mildgood{ background: #c3e6c3; }
+.diff-neutral { background: #f0f0f0; }
+.diff-mildbad { background: #f5c6c6; }
+.diff-bad     { background: #d97070; color: #fff; }
+.diff-vbad    { background: #cf222e; color: #fff; }
