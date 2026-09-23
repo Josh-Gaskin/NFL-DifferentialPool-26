@@ -40,24 +40,48 @@ def get_json(url, retries=3, timeout=15):
     raise RuntimeError(f"Failed to fetch {url}: {last_err}")
 
 
+def _ref_id(ref_obj):
+    """Given a core-API {"$ref": "...teams/5?..."} style object, pull the
+    trailing numeric id out of the URL without an extra HTTP call."""
+    if not isinstance(ref_obj, dict) or "$ref" not in ref_obj:
+        return None
+    return ref_obj["$ref"].rstrip("/").split("/")[-1].split("?")[0]
+
+
 def fetch_teams():
-    url = "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams?limit=40"
+    """
+    site.api.espn.com/.../teams returns HTTP 403 from GitHub Actions runner
+    IPs (it's behind bot protection meant for the espn.com website itself).
+    sports.core.api.espn.com is the backend API and is not protected the
+    same way, so we use it instead - at the cost of one extra request per
+    team, since the collection endpoint only returns $ref links.
+    """
+    url = "https://sports.core.api.espn.com/v2/sports/football/leagues/nfl/teams?limit=40"
     data = get_json(url)
+    items = data.get("items", [])
+    if not items:
+        raise RuntimeError("teams response had no items")
+
     teams = []
-    for entry in data["sports"][0]["leagues"][0]["teams"]:
-        t = entry["team"]
+    for item in items:
+        ref = item.get("$ref")
+        if not ref:
+            continue
+        t = get_json(ref)
         logo = ""
         if t.get("logos"):
             logo = t["logos"][0].get("href", "")
         teams.append(
             {
-                "id": t["id"],
+                "id": str(t.get("id")),
                 "abbr": t.get("abbreviation", "").upper(),
                 "name": t.get("displayName", ""),
                 "shortName": t.get("shortDisplayName", ""),
                 "logo": logo,
             }
         )
+        time.sleep(0.1)
+
     if len(teams) < 32:
         raise RuntimeError(f"Expected 32 teams, got {len(teams)}")
     teams.sort(key=lambda x: x["abbr"])
@@ -102,8 +126,7 @@ def fetch_fpi(team_id_by_abbr):
         team_id = None
         if isinstance(team_ref, dict):
             if "$ref" in team_ref:
-                # team is itself a $ref - id is usually embedded in the URL
-                team_id = team_ref["$ref"].rstrip("/").split("/")[-1].split("?")[0]
+                team_id = _ref_id(team_ref)
             else:
                 team_id = team_ref.get("id")
 
@@ -123,29 +146,48 @@ def fetch_fpi(team_id_by_abbr):
     return results
 
 
-def fetch_schedule():
+def fetch_schedule(id_to_abbr):
+    """
+    Same 403-from-Actions issue as fetch_teams applies to the scoreboard
+    endpoint, so this walks the core API's events instead: one call per
+    week to list that week's events (as $refs), then one call per event to
+    get its competitors. Team identity is resolved from the ref URL's id
+    against the id_to_abbr map already built in fetch_teams, so we don't
+    need a further dereference per competitor.
+    """
     weeks = {}
     for wk in WEEKS:
-        url = (
-            "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard"
-            f"?year={YEAR}&seasontype=2&week={wk}"
+        events_url = (
+            "https://sports.core.api.espn.com/v2/sports/football/leagues/nfl"
+            f"/seasons/{YEAR}/types/2/weeks/{wk}/events?limit=25"
         )
-        data = get_json(url)
+        events_list = get_json(events_url)
         games = []
-        for event in data.get("events", []):
-            comp = event["competitions"][0]
-            home = away = None
-            for c in comp["competitors"]:
-                team = {
-                    "id": c["team"]["id"],
-                    "abbr": c["team"].get("abbreviation", "").upper(),
-                }
-                if c.get("homeAway") == "home":
-                    home = team
-                else:
-                    away = team
-            if not home or not away:
+        for item in events_list.get("items", []):
+            ref = item.get("$ref")
+            if not ref:
                 continue
+            event = get_json(ref)
+            comps = event.get("competitions", [])
+            if not comps:
+                continue
+            competitors = comps[0].get("competitors", [])
+
+            home = away = None
+            for c in competitors:
+                tid = _ref_id(c.get("team", {}))
+                abbr = id_to_abbr.get(str(tid))
+                if not abbr:
+                    continue
+                entry = {"id": str(tid), "abbr": abbr}
+                if c.get("homeAway") == "home":
+                    home = entry
+                else:
+                    away = entry
+
+            if not home or not away:
+                continue  # couldn't resolve both sides; skip rather than guess
+
             games.append(
                 {
                     "date": event.get("date", ""),
@@ -155,8 +197,10 @@ def fetch_schedule():
                     "awayId": away["id"],
                 }
             )
+            time.sleep(0.1)
+
         weeks[str(wk)] = games
-        time.sleep(0.3)  # be a reasonable citizen of an undocumented API
+        time.sleep(0.2)
     return {"year": YEAR, "weeks": weeks}
 
 
@@ -169,9 +213,11 @@ def write_json(path, obj):
 
 def main():
     ok = True
+    id_to_abbr = {}
 
     try:
         teams = fetch_teams()
+        id_to_abbr = {t["id"]: t["abbr"] for t in teams}
         write_json(DATA_DIR / "teams.json", teams)
         print(f"teams.json written ({len(teams)} teams)")
     except Exception as e:
@@ -190,7 +236,9 @@ def main():
         print(f"ERROR fetching FPI: {e}", file=sys.stderr)
 
     try:
-        schedule = fetch_schedule()
+        if not id_to_abbr:
+            raise RuntimeError("skipping schedule fetch: team id/abbr map unavailable (teams fetch failed above)")
+        schedule = fetch_schedule(id_to_abbr)
         write_json(DATA_DIR / "schedule.json", schedule)
         print("schedule.json written")
     except Exception as e:
