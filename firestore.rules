@@ -1,0 +1,26 @@
+rules_version = '2';
+
+// No sign-in on this site, so there's no request.auth to check against.
+// Anyone who has your site's URL (and therefore the public Firebase config
+// embedded in the page) can read/write the picks document below. That's a
+// reasonable tradeoff for a private two-person pool, but it does mean the
+// link itself is effectively the only thing controlling access - don't
+// post it somewhere public.
+//
+// If you ever want real access control back, the simplest fix is
+// restoring Google sign-in (an earlier version of this app had it) and
+// checking request.auth.token.email here.
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /picks/{seasonYear} {
+      allow read, write: if true;
+    }
+
+    // Deny everything else by default.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
