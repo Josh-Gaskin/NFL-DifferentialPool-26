@@ -1,6 +1,8 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
 import {
   getFirestore,
+  initializeFirestore,
+  persistentLocalCache,
   doc,
   setDoc,
   updateDoc,
@@ -19,7 +21,19 @@ import { hungarianAssign, INFEASIBLE } from "./hungarian.js";
 
 // ---------- Firebase setup ----------
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+
+// Persistent (IndexedDB-backed) local cache: on repeat visits, onSnapshot's
+// first callback can fire from what's already on disk instead of waiting on
+// a round trip to Firestore's servers, so a refresh shows your picks
+// near-instantly. Falls back to the plain in-memory client if the browser
+// doesn't support it (e.g. some private-browsing modes).
+let db;
+try {
+  db = initializeFirestore(app, { localCache: persistentLocalCache() });
+} catch (e) {
+  console.warn("Persistent Firestore cache unavailable, using in-memory client:", e);
+  db = getFirestore(app);
+}
 const picksRef = doc(db, "picks", String(YEAR));
 
 // ---------- Pool state ----------
@@ -30,6 +44,8 @@ let scheduleIndex = {};   // { [week]: { [abbr]: {opponent, isHome, completed, m
 let lockedSlots = {};     // Firestore data: { [slotId]: {team, week, opponent, isHome, predictedDiff, actualDiff?} }
 let editingResults = new Set(); // slot ids currently showing the manual-score inputs
 let matrixMode = "matchup"; // "matchup" | "diff"
+let activeTab = "picks";    // "picks" | "matrix"
+let lastPlan = {};          // cached optimizer output, reused so tab switches don't recompute
 
 const SLOTS = buildSlots();
 
@@ -279,7 +295,9 @@ function renderPicks(plan) {
 }
 
 function logoImg(team) {
-  return team && team.logo ? `<img src="${team.logo}" class="logo" alt="">` : "";
+  return team && team.logo
+    ? `<img src="${team.logo}" class="logo" alt="" width="20" height="20" loading="lazy">`
+    : "";
 }
 
 function fmtDiff(n) {
@@ -394,9 +412,10 @@ document.querySelectorAll("[data-tab]").forEach((btn) => {
   btn.addEventListener("click", () => {
     document.querySelectorAll("[data-tab]").forEach((b) => b.classList.remove("active"));
     btn.classList.add("active");
-    const target = btn.dataset.tab;
-    el("#picks-view").classList.toggle("hidden", target !== "picks");
-    el("#matrix-view").classList.toggle("hidden", target !== "matrix");
+    activeTab = btn.dataset.tab;
+    el("#picks-view").classList.toggle("hidden", activeTab !== "picks");
+    el("#matrix-view").classList.toggle("hidden", activeTab !== "matrix");
+    if (activeTab === "matrix") renderMatrix(lastPlan); // build it on demand, not on every load
   });
 });
 
@@ -405,20 +424,21 @@ document.querySelectorAll("[data-matrix-mode]").forEach((btn) => {
     matrixMode = btn.dataset.matrixMode;
     document.querySelectorAll("[data-matrix-mode]").forEach((b) => b.classList.remove("active"));
     btn.classList.add("active");
-    render();
+    renderMatrix(lastPlan);
   });
 });
 
 // ---------- Top-level render ----------
 function render() {
-  const plan = computeOptimalPlan();
-  renderPicks(plan);
-  renderMatrix(plan);
+  lastPlan = computeOptimalPlan();
+  renderPicks(lastPlan);
+  if (activeTab === "matrix") renderMatrix(lastPlan); // skip building it (and its images) while on the Picks tab
 }
 
 // ---------- Startup ----------
 (async function init() {
   await loadStaticData();
+  render(); // first paint using local JSON only — don't wait on Firestore's round trip
   onSnapshot(picksRef, (snap) => {
     lockedSlots = snap.exists() ? snap.data().slots || {} : {};
     render();

@@ -4,6 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark">
+<link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://firestore.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://a.espncdn.com" crossorigin>
+<link rel="modulepreload" href="https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js">
+<link rel="modulepreload" href="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js">
 <title>NFL Point Differential Pool</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
@@ -40,7 +45,7 @@
             <th></th>
           </tr>
         </thead>
-        <tbody></tbody>
+        <tbody><tr><td colspan="6" class="pending">Loading pool data…</td></tr></tbody>
       </table>
     </section>
 
