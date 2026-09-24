@@ -20,6 +20,7 @@
   <nav class="tabs">
     <button data-tab="picks" class="active">Picks & Strategy</button>
     <button data-tab="matrix">Full Schedule</button>
+    <button data-tab="fpi">FPI Rankings</button>
   </nav>
 
   <main id="app-view">
@@ -65,6 +66,23 @@
           <tbody></tbody>
         </table>
       </div>
+    </section>
+
+    <section id="fpi-view" class="hidden">
+      <p class="explainer">
+        All 32 teams ranked by current ESPN FPI, highest first. <span class="legend-swatch picked"></span> = already picked (greyed out — no longer available). Updates whenever the data pipeline runs.
+      </p>
+      <table id="fpi-table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Team</th>
+            <th>FPI</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
     </section>
   </main>
 
