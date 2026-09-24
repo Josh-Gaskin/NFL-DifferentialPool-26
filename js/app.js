@@ -44,7 +44,7 @@ let scheduleIndex = {};   // { [week]: { [abbr]: {opponent, isHome, completed, m
 let lockedSlots = {};     // Firestore data: { [slotId]: {team, week, opponent, isHome, predictedDiff, actualDiff?} }
 let editingResults = new Set(); // slot ids currently showing the manual-score inputs
 let matrixMode = "matchup"; // "matchup" | "diff"
-let activeTab = "picks";    // "picks" | "matrix"
+let activeTab = "picks";    // "picks" | "matrix" | "fpi"
 let lastPlan = {};          // cached optimizer output, reused so tab switches don't recompute
 
 const SLOTS = buildSlots();
@@ -407,6 +407,35 @@ function renderMatrix(plan) {
   el("#matrix-table tbody").innerHTML = bodyHtml;
 }
 
+// ---------- Rendering: FPI Rankings tab ----------
+function renderFpiRankings() {
+  const lockedTeamSet = new Set(Object.values(lockedSlots).map((s) => s.team));
+
+  const ranked = teams
+    .filter((t) => fpiByAbbr[t.abbr] != null)
+    .slice()
+    .sort((a, b) => fpiByAbbr[b.abbr] - fpiByAbbr[a.abbr]);
+
+  const rows = ranked
+    .map((t, i) => {
+      const picked = lockedTeamSet.has(t.abbr);
+      const pickedSlot = picked
+        ? Object.values(lockedSlots).find((s) => s.team === t.abbr)
+        : null;
+      return `
+        <tr class="${picked ? "fpi-picked" : ""}">
+          <td>${i + 1}</td>
+          <td class="team-cell">${logoImg(t)} ${t.abbr} <span class="team-fullname">${t.name || ""}</span></td>
+          <td>${fmtDiff(fpiByAbbr[t.abbr])}</td>
+          <td>${picked ? `picked${pickedSlot ? ` (wk ${pickedSlot.week})` : ""}` : "available"}</td>
+        </tr>`;
+    })
+    .join("");
+
+  el("#fpi-table tbody").innerHTML =
+    rows || `<tr><td colspan="4" class="pending">FPI data not loaded yet — run the data pipeline.</td></tr>`;
+}
+
 // ---------- Tabs & matrix mode toggle ----------
 document.querySelectorAll("[data-tab]").forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -415,7 +444,9 @@ document.querySelectorAll("[data-tab]").forEach((btn) => {
     activeTab = btn.dataset.tab;
     el("#picks-view").classList.toggle("hidden", activeTab !== "picks");
     el("#matrix-view").classList.toggle("hidden", activeTab !== "matrix");
+    el("#fpi-view").classList.toggle("hidden", activeTab !== "fpi");
     if (activeTab === "matrix") renderMatrix(lastPlan); // build it on demand, not on every load
+    if (activeTab === "fpi") renderFpiRankings();
   });
 });
 
@@ -433,6 +464,7 @@ function render() {
   lastPlan = computeOptimalPlan();
   renderPicks(lastPlan);
   if (activeTab === "matrix") renderMatrix(lastPlan); // skip building it (and its images) while on the Picks tab
+  if (activeTab === "fpi") renderFpiRankings();
 }
 
 // ---------- Startup ----------

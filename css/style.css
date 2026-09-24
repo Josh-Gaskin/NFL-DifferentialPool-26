@@ -203,3 +203,20 @@ thead .sticky-col { background: var(--bg-alt); z-index: 2; }
 .diff-mildbad  { background: #4a2d2d; color: var(--text); }
 .diff-bad      { background: #c9483f; color: #fff; }
 .diff-vbad     { background: #da3633; color: #fff; }
+
+/* ---------- FPI Rankings ---------- */
+#fpi-table tr.fpi-picked {
+  opacity: 0.4;
+  text-decoration: line-through;
+}
+#fpi-table tr.fpi-picked td:last-child {
+  text-decoration: none;
+  font-style: italic;
+  opacity: 1;
+}
+.team-fullname {
+  color: var(--text-dim);
+  font-weight: normal;
+  font-size: 0.85em;
+  margin-left: 4px;
+}
