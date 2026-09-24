@@ -183,6 +183,9 @@ def fetch_schedule(id_to_abbr):
     picks having to be entered by hand.
     """
     weeks = {}
+    completed_count = 0
+    total_count = 0
+
     for wk in WEEKS:
         events_url = (
             "https://sports.core.api.espn.com/v2/sports/football/leagues/nfl"
@@ -202,6 +205,13 @@ def fetch_schedule(id_to_abbr):
             competitors = competition.get("competitors", [])
 
             status = competition.get("status", {}) or {}
+            if isinstance(status, dict) and "$ref" in status:
+                # Same pattern as scores: the core API often gives status as
+                # a reference link rather than embedding it in the event.
+                try:
+                    status = get_json(status["$ref"])
+                except Exception:
+                    status = {}
             status_type = status.get("type", {}) or {}
             completed = bool(status_type.get("completed", False))
 
@@ -222,6 +232,10 @@ def fetch_schedule(id_to_abbr):
             if not home or not away:
                 continue  # couldn't resolve both sides; skip rather than guess
 
+            total_count += 1
+            if completed:
+                completed_count += 1
+
             games.append(
                 {
                     "date": event.get("date", ""),
@@ -238,6 +252,7 @@ def fetch_schedule(id_to_abbr):
 
         weeks[str(wk)] = games
         time.sleep(0.2)
+    print(f"schedule: {total_count} games total, {completed_count} marked completed", file=sys.stderr)
     return {"year": YEAR, "weeks": weeks}
 
 
