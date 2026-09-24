@@ -8,9 +8,9 @@
         "away": "NE",
         "homeId": "26",
         "awayId": "17",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 13.0,
+        "awayScore": 10.0
       },
       {
         "date": "2026-09-11T00:35Z",
@@ -18,9 +18,9 @@
         "away": "SF",
         "homeId": "14",
         "awayId": "25",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 7.0,
+        "awayScore": 27.0
       },
       {
         "date": "2026-09-13T17:00Z",
@@ -28,9 +28,9 @@
         "away": "TB",
         "homeId": "4",
         "awayId": "27",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 33.0,
+        "awayScore": 27.0
       },
       {
         "date": "2026-09-13T17:00Z",
@@ -38,9 +38,9 @@
         "away": "NO",
         "homeId": "8",
         "awayId": "18",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 31.0,
+        "awayScore": 30.0
       },
       {
         "date": "2026-09-13T17:00Z",
@@ -48,9 +48,9 @@
         "away": "NYJ",
         "homeId": "10",
         "awayId": "20",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 10.0,
+        "awayScore": 23.0
       },
       {
         "date": "2026-09-13T17:00Z",
@@ -58,9 +58,9 @@
         "away": "BAL",
         "homeId": "11",
         "awayId": "33",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 23.0,
+        "awayScore": 41.0
       },
       {
         "date": "2026-09-13T17:00Z",
@@ -68,9 +68,9 @@
         "away": "ATL",
         "homeId": "23",
         "awayId": "1",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 20.0,
+        "awayScore": 13.0
       },
       {
         "date": "2026-09-13T17:00Z",
@@ -78,9 +78,9 @@
         "away": "CHI",
         "homeId": "29",
         "awayId": "3",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 37.0,
+        "awayScore": 59.0
       },
       {
         "date": "2026-09-13T17:00Z",
@@ -88,9 +88,9 @@
         "away": "CLE",
         "homeId": "30",
         "awayId": "5",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 34.0,
+        "awayScore": 10.0
       },
       {
         "date": "2026-09-13T17:00Z",
@@ -98,9 +98,9 @@
         "away": "BUF",
         "homeId": "34",
         "awayId": "2",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 31.0,
+        "awayScore": 36.0
       },
       {
         "date": "2026-09-13T20:25Z",
@@ -108,9 +108,9 @@
         "away": "MIA",
         "homeId": "13",
         "awayId": "15",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 27.0,
+        "awayScore": 13.0
       },
       {
         "date": "2026-09-13T20:25Z",
@@ -118,9 +118,9 @@
         "away": "GB",
         "homeId": "16",
         "awayId": "9",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 39.0,
+        "awayScore": 22.0
       },
       {
         "date": "2026-09-13T20:25Z",
@@ -128,9 +128,9 @@
         "away": "WSH",
         "homeId": "21",
         "awayId": "28",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 24.0,
+        "awayScore": 22.0
       },
       {
         "date": "2026-09-13T20:25Z",
@@ -138,9 +138,9 @@
         "away": "ARI",
         "homeId": "24",
         "awayId": "22",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 14.0,
+        "awayScore": 26.0
       },
       {
         "date": "2026-09-14T00:20Z",
@@ -148,9 +148,9 @@
         "away": "DAL",
         "homeId": "19",
         "awayId": "6",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 28.0,
+        "awayScore": 20.0
       },
       {
         "date": "2026-09-15T00:15Z",
@@ -158,9 +158,9 @@
         "away": "DEN",
         "homeId": "12",
         "awayId": "7",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 31.0,
+        "awayScore": 10.0
       }
     ],
     "2": [
@@ -170,9 +170,9 @@
         "away": "DET",
         "homeId": "2",
         "awayId": "8",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 41.0,
+        "awayScore": 31.0
       },
       {
         "date": "2026-09-20T17:00Z",
@@ -180,9 +180,9 @@
         "away": "CAR",
         "homeId": "1",
         "awayId": "29",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 3.0,
+        "awayScore": 34.0
       },
       {
         "date": "2026-09-20T17:00Z",
@@ -190,9 +190,9 @@
         "away": "MIN",
         "homeId": "3",
         "awayId": "16",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 3.0,
+        "awayScore": 9.0
       },
       {
         "date": "2026-09-20T17:00Z",
@@ -200,9 +200,9 @@
         "away": "PHI",
         "homeId": "10",
         "awayId": "21",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 20.0,
+        "awayScore": 24.0
       },
       {
         "date": "2026-09-20T17:00Z",
@@ -210,9 +210,9 @@
         "away": "PIT",
         "homeId": "17",
         "awayId": "23",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 20.0,
+        "awayScore": 3.0
       },
       {
         "date": "2026-09-20T17:00Z",
@@ -220,9 +220,9 @@
         "away": "GB",
         "homeId": "20",
         "awayId": "9",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 17.0,
+        "awayScore": 20.0
       },
       {
         "date": "2026-09-20T17:00Z",
@@ -230,9 +230,9 @@
         "away": "CLE",
         "homeId": "27",
         "awayId": "5",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 19.0,
+        "awayScore": 23.0
       },
       {
         "date": "2026-09-20T17:00Z",
@@ -240,9 +240,9 @@
         "away": "NO",
         "homeId": "33",
         "awayId": "18",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 17.0,
+        "awayScore": 24.0
       },
       {
         "date": "2026-09-20T17:00Z",
@@ -250,9 +250,9 @@
         "away": "CIN",
         "homeId": "34",
         "awayId": "4",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 6.0,
+        "awayScore": 20.0
       },
       {
         "date": "2026-09-20T20:05Z",
@@ -260,9 +260,9 @@
         "away": "JAX",
         "homeId": "7",
         "awayId": "30",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 20.0,
+        "awayScore": 13.0
       },
       {
         "date": "2026-09-20T20:05Z",
@@ -270,9 +270,9 @@
         "away": "LV",
         "homeId": "24",
         "awayId": "13",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 14.0,
+        "awayScore": 26.0
       },
       {
         "date": "2026-09-20T20:25Z",
@@ -280,9 +280,9 @@
         "away": "WSH",
         "homeId": "6",
         "awayId": "28",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 37.0,
+        "awayScore": 20.0
       },
       {
         "date": "2026-09-20T20:25Z",
@@ -290,9 +290,9 @@
         "away": "SEA",
         "homeId": "22",
         "awayId": "26",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 7.0,
+        "awayScore": 31.0
       },
       {
         "date": "2026-09-20T20:25Z",
@@ -300,9 +300,9 @@
         "away": "MIA",
         "homeId": "25",
         "awayId": "15",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 35.0,
+        "awayScore": 13.0
       },
       {
         "date": "2026-09-21T00:20Z",
@@ -310,9 +310,9 @@
         "away": "IND",
         "homeId": "12",
         "awayId": "11",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 33.0,
+        "awayScore": 30.0
       },
       {
         "date": "2026-09-22T00:15Z",
@@ -320,9 +320,9 @@
         "away": "NYG",
         "homeId": "14",
         "awayId": "19",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 28.0,
+        "awayScore": 6.0
       }
     ],
     "3": [
