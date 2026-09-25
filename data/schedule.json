@@ -332,9 +332,9 @@
         "away": "ATL",
         "homeId": "9",
         "awayId": "1",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 14.0,
+        "awayScore": 35.0
       },
       {
         "date": "2026-09-27T17:00Z",
