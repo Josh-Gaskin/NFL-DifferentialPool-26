@@ -327,16 +327,6 @@
     ],
     "3": [
       {
-        "date": "2026-09-25T00:15Z",
-        "home": "GB",
-        "away": "ATL",
-        "homeId": "9",
-        "awayId": "1",
-        "completed": true,
-        "homeScore": 14.0,
-        "awayScore": 35.0
-      },
-      {
         "date": "2026-09-27T17:00Z",
         "home": "BUF",
         "away": "LAC",
@@ -475,6 +465,16 @@
         "completed": false,
         "homeScore": null,
         "awayScore": null
+      },
+      {
+        "date": "2026-09-25T00:15Z",
+        "home": "GB",
+        "away": "ATL",
+        "homeId": "9",
+        "awayId": "1",
+        "completed": true,
+        "homeScore": 14.0,
+        "awayScore": 35.0
       },
       {
         "date": "2026-09-29T00:15Z",
