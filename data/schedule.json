@@ -672,6 +672,16 @@
       },
       {
         "date": "2026-10-11T17:00Z",
+        "home": "GB",
+        "away": "CHI",
+        "homeId": "9",
+        "awayId": "3",
+        "completed": false,
+        "homeScore": null,
+        "awayScore": null
+      },
+      {
+        "date": "2026-10-11T17:00Z",
         "home": "TEN",
         "away": "HOU",
         "homeId": "10",
@@ -746,16 +756,6 @@
         "away": "DEN",
         "homeId": "24",
         "awayId": "7",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
-      },
-      {
-        "date": "2026-10-11T20:25Z",
-        "home": "GB",
-        "away": "CHI",
-        "homeId": "9",
-        "awayId": "3",
         "completed": false,
         "homeScore": null,
         "awayScore": null
