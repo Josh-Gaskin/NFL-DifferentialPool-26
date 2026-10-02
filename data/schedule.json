@@ -494,9 +494,9 @@
         "away": "PIT",
         "homeId": "5",
         "awayId": "23",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 27.0,
+        "awayScore": 24.0
       },
       {
         "date": "2026-10-04T13:30Z",
