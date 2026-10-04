@@ -494,9 +494,9 @@
         "away": "IND",
         "homeId": "28",
         "awayId": "11",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 13.0,
+        "awayScore": 30.0
       },
       {
         "date": "2026-10-04T17:00Z",
