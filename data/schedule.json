@@ -656,9 +656,9 @@
         "away": "TB",
         "homeId": "6",
         "awayId": "27",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 16.0,
+        "awayScore": 24.0
       },
       {
         "date": "2026-10-11T13:30Z",
