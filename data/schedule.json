@@ -808,9 +808,9 @@
         "away": "SEA",
         "homeId": "7",
         "awayId": "26",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 17.0,
+        "awayScore": 14.0
       },
       {
         "date": "2026-10-18T13:30Z",
