@@ -1,6 +1,6 @@
 {
   "year": 2026,
-  "updated": "2026-10-17T16:01:16Z",
+  "updated": "2026-10-18T08:23:03Z",
   "ratings": [
     {
       "teamId": "25",
@@ -33,33 +33,33 @@
       "fpiRank": 6
     },
     {
+      "teamId": "3",
+      "fpi": 3.23,
+      "fpiRank": 7
+    },
+    {
       "teamId": "17",
       "fpi": 2.58,
-      "fpiRank": 7
+      "fpiRank": 8
     },
     {
       "teamId": "6",
       "fpi": 2.46,
-      "fpiRank": 8
+      "fpiRank": 9
     },
     {
       "teamId": "4",
       "fpi": 2.43,
-      "fpiRank": 9
+      "fpiRank": 10
     },
     {
       "teamId": "8",
       "fpi": 2.14,
-      "fpiRank": 10
+      "fpiRank": 11
     },
     {
       "teamId": "34",
       "fpi": 1.79,
-      "fpiRank": 11
-    },
-    {
-      "teamId": "3",
-      "fpi": 1.73,
       "fpiRank": 12
     },
     {
@@ -103,13 +103,13 @@
       "fpiRank": 20
     },
     {
-      "teamId": "13",
-      "fpi": -2.74,
+      "teamId": "1",
+      "fpi": -2.56,
       "fpiRank": 21
     },
     {
-      "teamId": "1",
-      "fpi": -2.75,
+      "teamId": "13",
+      "fpi": -2.74,
       "fpiRank": 22
     },
     {
