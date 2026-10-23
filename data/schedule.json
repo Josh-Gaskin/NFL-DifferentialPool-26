@@ -950,9 +950,9 @@
         "away": "NE",
         "homeId": "3",
         "awayId": "17",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 30.0,
+        "awayScore": 24.0
       },
       {
         "date": "2026-10-25T13:30Z",
