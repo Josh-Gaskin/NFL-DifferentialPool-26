@@ -950,9 +950,9 @@
         "away": "PIT",
         "homeId": "18",
         "awayId": "23",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 10.0,
+        "awayScore": 16.0
       },
       {
         "date": "2026-10-25T17:00Z",
