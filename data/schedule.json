@@ -945,16 +945,6 @@
     ],
     "7": [
       {
-        "date": "2026-10-27T00:15Z",
-        "home": "PHI",
-        "away": "DAL",
-        "homeId": "21",
-        "awayId": "6",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
-      },
-      {
         "date": "2026-10-23T00:15Z",
         "home": "CHI",
         "away": "NE",
@@ -1083,6 +1073,16 @@
         "completed": true,
         "homeScore": 20.0,
         "awayScore": 3.0
+      },
+      {
+        "date": "2026-10-27T00:15Z",
+        "home": "PHI",
+        "away": "DAL",
+        "homeId": "21",
+        "awayId": "6",
+        "completed": true,
+        "homeScore": 21.0,
+        "awayScore": 38.0
       }
     ],
     "8": [
@@ -1329,21 +1329,21 @@
         "awayScore": null
       },
       {
-        "date": "2026-11-08T21:05Z",
-        "home": "SF",
-        "away": "LV",
-        "homeId": "25",
-        "awayId": "13",
+        "date": "2026-11-08T21:25Z",
+        "home": "NE",
+        "away": "GB",
+        "homeId": "17",
+        "awayId": "9",
         "completed": false,
         "homeScore": null,
         "awayScore": null
       },
       {
         "date": "2026-11-08T21:25Z",
-        "home": "NE",
-        "away": "GB",
-        "homeId": "17",
-        "awayId": "9",
+        "home": "SF",
+        "away": "LV",
+        "homeId": "25",
+        "awayId": "13",
         "completed": false,
         "homeScore": null,
         "awayScore": null
