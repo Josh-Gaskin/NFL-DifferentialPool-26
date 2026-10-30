@@ -1092,9 +1092,9 @@
         "away": "CAR",
         "homeId": "9",
         "awayId": "29",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 27.0,
+        "awayScore": 19.0
       },
       {
         "date": "2026-11-01T18:00Z",
