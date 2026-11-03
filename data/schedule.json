@@ -1087,16 +1087,6 @@
     ],
     "8": [
       {
-        "date": "2026-11-03T01:15Z",
-        "home": "SEA",
-        "away": "CHI",
-        "homeId": "26",
-        "awayId": "3",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
-      },
-      {
         "date": "2026-10-30T00:15Z",
         "home": "GB",
         "away": "CAR",
@@ -1225,6 +1215,16 @@
         "completed": true,
         "homeScore": 27.0,
         "awayScore": 10.0
+      },
+      {
+        "date": "2026-11-03T01:15Z",
+        "home": "SEA",
+        "away": "CHI",
+        "homeId": "26",
+        "awayId": "3",
+        "completed": true,
+        "homeScore": 17.0,
+        "awayScore": 34.0
       }
     ],
     "9": [
