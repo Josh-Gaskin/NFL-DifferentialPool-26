@@ -1234,9 +1234,9 @@
         "away": "JAX",
         "homeId": "33",
         "awayId": "30",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "completed": true,
+        "homeScore": 10.0,
+        "awayScore": 33.0
       },
       {
         "date": "2026-11-08T14:30Z",
