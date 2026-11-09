@@ -1229,131 +1229,11 @@
     ],
     "9": [
       {
-        "date": "2026-11-08T18:00Z",
-        "home": "IND",
-        "away": "DAL",
-        "homeId": "11",
-        "awayId": "6",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
-      },
-      {
-        "date": "2026-11-08T18:00Z",
-        "home": "KC",
-        "away": "NYJ",
-        "homeId": "12",
-        "awayId": "20",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
-      },
-      {
-        "date": "2026-11-08T18:00Z",
-        "home": "MIA",
-        "away": "DET",
-        "homeId": "15",
-        "awayId": "8",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
-      },
-      {
-        "date": "2026-11-08T18:00Z",
-        "home": "NO",
-        "away": "CLE",
-        "homeId": "18",
-        "awayId": "5",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
-      },
-      {
-        "date": "2026-11-08T18:00Z",
-        "home": "PHI",
-        "away": "NYG",
-        "homeId": "21",
-        "awayId": "19",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
-      },
-      {
-        "date": "2026-11-08T18:00Z",
-        "home": "WSH",
-        "away": "LAR",
-        "homeId": "28",
-        "awayId": "14",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
-      },
-      {
-        "date": "2026-11-08T18:00Z",
-        "home": "CAR",
-        "away": "DEN",
-        "homeId": "29",
-        "awayId": "7",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
-      },
-      {
-        "date": "2026-11-08T14:30Z",
-        "home": "ATL",
-        "away": "CIN",
-        "homeId": "1",
-        "awayId": "4",
-        "completed": true,
-        "homeScore": 17.0,
-        "awayScore": 34.0
-      },
-      {
-        "date": "2026-11-08T21:05Z",
-        "home": "LAC",
-        "away": "HOU",
-        "homeId": "24",
-        "awayId": "34",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
-      },
-      {
-        "date": "2026-11-08T21:25Z",
-        "home": "NE",
-        "away": "GB",
-        "homeId": "17",
-        "awayId": "9",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
-      },
-      {
-        "date": "2026-11-08T21:25Z",
-        "home": "SF",
-        "away": "LV",
-        "homeId": "25",
-        "awayId": "13",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
-      },
-      {
-        "date": "2026-11-08T21:25Z",
-        "home": "SEA",
-        "away": "ARI",
-        "homeId": "26",
-        "awayId": "22",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
-      },
-      {
-        "date": "2026-11-09T01:20Z",
-        "home": "CHI",
-        "away": "TB",
-        "homeId": "3",
-        "awayId": "27",
+        "date": "2026-11-10T01:15Z",
+        "home": "MIN",
+        "away": "BUF",
+        "homeId": "16",
+        "awayId": "2",
         "completed": false,
         "homeScore": null,
         "awayScore": null
@@ -1369,14 +1249,134 @@
         "awayScore": 33.0
       },
       {
-        "date": "2026-11-10T01:15Z",
-        "home": "MIN",
-        "away": "BUF",
-        "homeId": "16",
-        "awayId": "2",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "date": "2026-11-08T14:30Z",
+        "home": "ATL",
+        "away": "CIN",
+        "homeId": "1",
+        "awayId": "4",
+        "completed": true,
+        "homeScore": 17.0,
+        "awayScore": 34.0
+      },
+      {
+        "date": "2026-11-08T18:00Z",
+        "home": "IND",
+        "away": "DAL",
+        "homeId": "11",
+        "awayId": "6",
+        "completed": true,
+        "homeScore": 23.0,
+        "awayScore": 27.0
+      },
+      {
+        "date": "2026-11-08T18:00Z",
+        "home": "KC",
+        "away": "NYJ",
+        "homeId": "12",
+        "awayId": "20",
+        "completed": true,
+        "homeScore": 35.0,
+        "awayScore": 12.0
+      },
+      {
+        "date": "2026-11-08T18:00Z",
+        "home": "MIA",
+        "away": "DET",
+        "homeId": "15",
+        "awayId": "8",
+        "completed": true,
+        "homeScore": 9.0,
+        "awayScore": 19.0
+      },
+      {
+        "date": "2026-11-08T18:00Z",
+        "home": "NO",
+        "away": "CLE",
+        "homeId": "18",
+        "awayId": "5",
+        "completed": true,
+        "homeScore": 23.0,
+        "awayScore": 22.0
+      },
+      {
+        "date": "2026-11-08T18:00Z",
+        "home": "PHI",
+        "away": "NYG",
+        "homeId": "21",
+        "awayId": "19",
+        "completed": true,
+        "homeScore": 11.0,
+        "awayScore": 19.0
+      },
+      {
+        "date": "2026-11-08T18:00Z",
+        "home": "WSH",
+        "away": "LAR",
+        "homeId": "28",
+        "awayId": "14",
+        "completed": true,
+        "homeScore": 13.0,
+        "awayScore": 20.0
+      },
+      {
+        "date": "2026-11-08T18:00Z",
+        "home": "CAR",
+        "away": "DEN",
+        "homeId": "29",
+        "awayId": "7",
+        "completed": true,
+        "homeScore": 21.0,
+        "awayScore": 26.0
+      },
+      {
+        "date": "2026-11-08T21:05Z",
+        "home": "LAC",
+        "away": "HOU",
+        "homeId": "24",
+        "awayId": "34",
+        "completed": true,
+        "homeScore": 22.0,
+        "awayScore": 44.0
+      },
+      {
+        "date": "2026-11-08T21:25Z",
+        "home": "NE",
+        "away": "GB",
+        "homeId": "17",
+        "awayId": "9",
+        "completed": true,
+        "homeScore": 27.0,
+        "awayScore": 45.0
+      },
+      {
+        "date": "2026-11-08T21:25Z",
+        "home": "SF",
+        "away": "LV",
+        "homeId": "25",
+        "awayId": "13",
+        "completed": true,
+        "homeScore": 38.0,
+        "awayScore": 17.0
+      },
+      {
+        "date": "2026-11-08T21:25Z",
+        "home": "SEA",
+        "away": "ARI",
+        "homeId": "26",
+        "awayId": "22",
+        "completed": true,
+        "homeScore": 17.0,
+        "awayScore": 3.0
+      },
+      {
+        "date": "2026-11-09T01:20Z",
+        "home": "CHI",
+        "away": "TB",
+        "homeId": "3",
+        "awayId": "27",
+        "completed": true,
+        "homeScore": 27.0,
+        "awayScore": 24.0
       }
     ],
     "10": [
