@@ -1584,10 +1584,10 @@
       },
       {
         "date": "2026-11-22T18:00Z",
-        "home": "NYG",
-        "away": "JAX",
-        "homeId": "19",
-        "awayId": "30",
+        "home": "PHI",
+        "away": "PIT",
+        "homeId": "21",
+        "awayId": "23",
         "completed": false,
         "homeScore": null,
         "awayScore": null
@@ -1624,10 +1624,10 @@
       },
       {
         "date": "2026-11-22T21:25Z",
-        "home": "PHI",
-        "away": "PIT",
-        "homeId": "21",
-        "awayId": "23",
+        "home": "NYG",
+        "away": "JAX",
+        "homeId": "19",
+        "awayId": "30",
         "completed": false,
         "homeScore": null,
         "awayScore": null
