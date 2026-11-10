@@ -1229,16 +1229,6 @@
     ],
     "9": [
       {
-        "date": "2026-11-10T01:15Z",
-        "home": "MIN",
-        "away": "BUF",
-        "homeId": "16",
-        "awayId": "2",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
-      },
-      {
         "date": "2026-11-06T01:15Z",
         "home": "BAL",
         "away": "JAX",
@@ -1377,6 +1367,16 @@
         "completed": true,
         "homeScore": 27.0,
         "awayScore": 24.0
+      },
+      {
+        "date": "2026-11-10T01:15Z",
+        "home": "MIN",
+        "away": "BUF",
+        "homeId": "16",
+        "awayId": "2",
+        "completed": true,
+        "homeScore": 6.0,
+        "awayScore": 23.0
       }
     ],
     "10": [
