@@ -1,6 +1,6 @@
 {
   "year": 2026,
-  "updated": "2026-11-10T20:05:40Z",
+  "updated": "2026-11-11T11:31:01Z",
   "ratings": [
     {
       "teamId": "25",
@@ -48,43 +48,43 @@
       "fpiRank": 9
     },
     {
+      "teamId": "16",
+      "fpi": 2.62,
+      "fpiRank": 10
+    },
+    {
       "teamId": "27",
       "fpi": 2.54,
-      "fpiRank": 10
+      "fpiRank": 11
     },
     {
       "teamId": "7",
       "fpi": 2.3,
-      "fpiRank": 11
+      "fpiRank": 12
     },
     {
       "teamId": "8",
       "fpi": 2.14,
-      "fpiRank": 12
+      "fpiRank": 13
     },
     {
       "teamId": "6",
       "fpi": 1.89,
-      "fpiRank": 13
+      "fpiRank": 14
     },
     {
       "teamId": "17",
       "fpi": 1.44,
-      "fpiRank": 14
+      "fpiRank": 15
     },
     {
       "teamId": "26",
       "fpi": 0.63,
-      "fpiRank": 15
+      "fpiRank": 16
     },
     {
       "teamId": "23",
       "fpi": -0.09,
-      "fpiRank": 16
-    },
-    {
-      "teamId": "16",
-      "fpi": -1.2,
       "fpiRank": 17
     },
     {
@@ -108,58 +108,58 @@
       "fpiRank": 21
     },
     {
-      "teamId": "13",
-      "fpi": -3.03,
-      "fpiRank": 22
-    },
-    {
       "teamId": "24",
       "fpi": -3.08,
-      "fpiRank": 23
+      "fpiRank": 22
     },
     {
       "teamId": "19",
       "fpi": -3.54,
-      "fpiRank": 24
+      "fpiRank": 23
     },
     {
       "teamId": "1",
-      "fpi": -4.11,
-      "fpiRank": 25
+      "fpi": -4.66,
+      "fpiRank": 24
     },
     {
       "teamId": "20",
       "fpi": -4.87,
-      "fpiRank": 26
+      "fpiRank": 25
     },
     {
       "teamId": "5",
       "fpi": -5.41,
-      "fpiRank": 27
+      "fpiRank": 26
     },
     {
       "teamId": "33",
-      "fpi": -5.83,
-      "fpiRank": 28
+      "fpi": -5.56,
+      "fpiRank": 27
     },
     {
       "teamId": "10",
       "fpi": -5.96,
-      "fpiRank": 29
+      "fpiRank": 28
     },
     {
       "teamId": "21",
       "fpi": -6.11,
-      "fpiRank": 30
+      "fpiRank": 29
     },
     {
-      "teamId": "15",
-      "fpi": -7.78,
-      "fpiRank": 31
+      "teamId": "13",
+      "fpi": -6.86,
+      "fpiRank": 30
     },
     {
       "teamId": "22",
       "fpi": -8.51,
+      "fpiRank": 31
+    },
+    {
+      "teamId": "15",
+      "fpi": -11.21,
       "fpiRank": 32
     }
   ]
