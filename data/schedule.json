@@ -1381,16 +1381,6 @@
     ],
     "10": [
       {
-        "date": "2026-11-15T14:30Z",
-        "home": "DET",
-        "away": "NE",
-        "homeId": "8",
-        "awayId": "17",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
-      },
-      {
         "date": "2026-11-15T18:00Z",
         "home": "ATL",
         "away": "KC",
@@ -1459,6 +1449,16 @@
         "completed": false,
         "homeScore": null,
         "awayScore": null
+      },
+      {
+        "date": "2026-11-15T14:30Z",
+        "home": "DET",
+        "away": "NE",
+        "homeId": "8",
+        "awayId": "17",
+        "completed": true,
+        "homeScore": 35.0,
+        "awayScore": 10.0
       },
       {
         "date": "2026-11-15T21:05Z",
