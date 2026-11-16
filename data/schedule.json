@@ -1381,121 +1381,11 @@
     ],
     "10": [
       {
-        "date": "2026-11-15T18:00Z",
-        "home": "ATL",
-        "away": "KC",
-        "homeId": "1",
-        "awayId": "12",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
-      },
-      {
-        "date": "2026-11-15T18:00Z",
-        "home": "CLE",
-        "away": "HOU",
-        "homeId": "5",
-        "awayId": "34",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
-      },
-      {
-        "date": "2026-11-15T18:00Z",
-        "home": "GB",
-        "away": "MIN",
-        "homeId": "9",
-        "awayId": "16",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
-      },
-      {
-        "date": "2026-11-15T18:00Z",
-        "home": "TEN",
-        "away": "JAX",
-        "homeId": "10",
-        "awayId": "30",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
-      },
-      {
-        "date": "2026-11-15T18:00Z",
-        "home": "IND",
-        "away": "MIA",
-        "homeId": "11",
-        "awayId": "15",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
-      },
-      {
-        "date": "2026-11-15T18:00Z",
-        "home": "NO",
-        "away": "CAR",
-        "homeId": "18",
-        "awayId": "29",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
-      },
-      {
-        "date": "2026-11-15T18:00Z",
-        "home": "NYJ",
-        "away": "BUF",
-        "homeId": "20",
-        "awayId": "2",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
-      },
-      {
-        "date": "2026-11-15T14:30Z",
-        "home": "DET",
-        "away": "NE",
-        "homeId": "8",
-        "awayId": "17",
-        "completed": true,
-        "homeScore": 35.0,
-        "awayScore": 10.0
-      },
-      {
-        "date": "2026-11-15T21:05Z",
-        "home": "LV",
-        "away": "SEA",
-        "homeId": "13",
-        "awayId": "26",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
-      },
-      {
-        "date": "2026-11-15T21:05Z",
-        "home": "ARI",
-        "away": "LAR",
-        "homeId": "22",
-        "awayId": "14",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
-      },
-      {
-        "date": "2026-11-15T21:25Z",
-        "home": "DAL",
-        "away": "SF",
-        "homeId": "6",
-        "awayId": "25",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
-      },
-      {
-        "date": "2026-11-16T01:20Z",
-        "home": "CIN",
-        "away": "PIT",
-        "homeId": "4",
-        "awayId": "23",
+        "date": "2026-11-17T01:15Z",
+        "home": "BAL",
+        "away": "LAC",
+        "homeId": "33",
+        "awayId": "24",
         "completed": false,
         "homeScore": null,
         "awayScore": null
@@ -1511,14 +1401,124 @@
         "awayScore": 24.0
       },
       {
-        "date": "2026-11-17T01:15Z",
-        "home": "BAL",
-        "away": "LAC",
-        "homeId": "33",
-        "awayId": "24",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
+        "date": "2026-11-15T14:30Z",
+        "home": "DET",
+        "away": "NE",
+        "homeId": "8",
+        "awayId": "17",
+        "completed": true,
+        "homeScore": 35.0,
+        "awayScore": 10.0
+      },
+      {
+        "date": "2026-11-15T18:00Z",
+        "home": "ATL",
+        "away": "KC",
+        "homeId": "1",
+        "awayId": "12",
+        "completed": true,
+        "homeScore": 13.0,
+        "awayScore": 35.0
+      },
+      {
+        "date": "2026-11-15T18:00Z",
+        "home": "CLE",
+        "away": "HOU",
+        "homeId": "5",
+        "awayId": "34",
+        "completed": true,
+        "homeScore": 27.0,
+        "awayScore": 24.0
+      },
+      {
+        "date": "2026-11-15T18:00Z",
+        "home": "GB",
+        "away": "MIN",
+        "homeId": "9",
+        "awayId": "16",
+        "completed": true,
+        "homeScore": 10.0,
+        "awayScore": 30.0
+      },
+      {
+        "date": "2026-11-15T18:00Z",
+        "home": "TEN",
+        "away": "JAX",
+        "homeId": "10",
+        "awayId": "30",
+        "completed": true,
+        "homeScore": 23.0,
+        "awayScore": 40.0
+      },
+      {
+        "date": "2026-11-15T18:00Z",
+        "home": "IND",
+        "away": "MIA",
+        "homeId": "11",
+        "awayId": "15",
+        "completed": true,
+        "homeScore": 24.0,
+        "awayScore": 22.0
+      },
+      {
+        "date": "2026-11-15T18:00Z",
+        "home": "NO",
+        "away": "CAR",
+        "homeId": "18",
+        "awayId": "29",
+        "completed": true,
+        "homeScore": 17.0,
+        "awayScore": 20.0
+      },
+      {
+        "date": "2026-11-15T18:00Z",
+        "home": "NYJ",
+        "away": "BUF",
+        "homeId": "20",
+        "awayId": "2",
+        "completed": true,
+        "homeScore": 12.0,
+        "awayScore": 31.0
+      },
+      {
+        "date": "2026-11-15T21:05Z",
+        "home": "LV",
+        "away": "SEA",
+        "homeId": "13",
+        "awayId": "26",
+        "completed": true,
+        "homeScore": 13.0,
+        "awayScore": 21.0
+      },
+      {
+        "date": "2026-11-15T21:05Z",
+        "home": "ARI",
+        "away": "LAR",
+        "homeId": "22",
+        "awayId": "14",
+        "completed": true,
+        "homeScore": 6.0,
+        "awayScore": 34.0
+      },
+      {
+        "date": "2026-11-15T21:25Z",
+        "home": "DAL",
+        "away": "SF",
+        "homeId": "6",
+        "awayId": "25",
+        "completed": true,
+        "homeScore": 40.0,
+        "awayScore": 46.0
+      },
+      {
+        "date": "2026-11-16T01:20Z",
+        "home": "CIN",
+        "away": "PIT",
+        "homeId": "4",
+        "awayId": "23",
+        "completed": true,
+        "homeScore": 38.0,
+        "awayScore": 18.0
       }
     ],
     "11": [
