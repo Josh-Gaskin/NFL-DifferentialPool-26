@@ -1523,16 +1523,6 @@
     ],
     "11": [
       {
-        "date": "2026-11-24T01:15Z",
-        "home": "WSH",
-        "away": "CIN",
-        "homeId": "28",
-        "awayId": "4",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
-      },
-      {
         "date": "2026-11-20T01:15Z",
         "home": "HOU",
         "away": "IND",
@@ -1651,6 +1641,16 @@
         "completed": true,
         "homeScore": 35.0,
         "awayScore": 10.0
+      },
+      {
+        "date": "2026-11-24T01:15Z",
+        "home": "WSH",
+        "away": "CIN",
+        "homeId": "28",
+        "awayId": "4",
+        "completed": true,
+        "homeScore": 22.0,
+        "awayScore": 20.0
       }
     ],
     "12": [
