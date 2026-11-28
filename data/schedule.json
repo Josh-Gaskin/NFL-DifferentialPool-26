@@ -1655,16 +1655,6 @@
     ],
     "12": [
       {
-        "date": "2026-11-27T20:00Z",
-        "home": "PIT",
-        "away": "DEN",
-        "homeId": "23",
-        "awayId": "7",
-        "completed": false,
-        "homeScore": null,
-        "awayScore": null
-      },
-      {
         "date": "2026-11-26T01:00Z",
         "home": "LAR",
         "away": "GB",
@@ -1703,6 +1693,16 @@
         "completed": true,
         "homeScore": 13.0,
         "awayScore": 10.0
+      },
+      {
+        "date": "2026-11-27T20:00Z",
+        "home": "PIT",
+        "away": "DEN",
+        "homeId": "23",
+        "awayId": "7",
+        "completed": true,
+        "homeScore": 27.0,
+        "awayScore": 5.0
       },
       {
         "date": "2026-11-29T18:00Z",
